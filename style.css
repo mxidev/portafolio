@@ -1,0 +1,600 @@
+/* Elemento raiz */
+:root {
+    --primary-color: #00ff9d;
+    --secondary-color: #272727;
+    --special-color: #80ffea;
+    --bg-color: #1a1818;
+
+    --personal-yellow: #ffa319;
+    --personal-red: #ff3831;
+}
+/* Elemento raiz */
+
+/* Diseño general */
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+/* Diseño general  */
+
+/* Barra de navegacion */
+.navbar {
+    padding: 20px;
+    font-size: 12pt;
+    background-color: var(--bg-color);
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-toggler {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url('./img/collapse.svg');
+}
+
+.navbar-brand {
+    font-weight: bolder;
+}
+
+.nav-item {
+    padding: 0 15px;
+    font-size: 14pt;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: text-shadow 0.2s ease-out;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-underline .nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--special-color),
+                 0 0 5px var(--primary-color),
+                 0 0 15px var(--special-color);
+}
+
+.nav-link:focus {
+    color: var(--primary-color);
+}
+
+.navbar-brand {
+    color: var(--primary-color);
+    font-size: 28px;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--special-color),
+                 0 0 5px var(--primary-color),
+                 0 0 25px var(--special-color);
+}
+/* Barra de navegacion */
+
+/* Cuerpo de la pagina (Hero) */
+.hero {
+    background-color: var(--secondary-color);
+    min-height: 450px;
+    text-align: center;
+    color: white;
+}
+
+.hero-principal {
+    padding: 10px 0;
+}
+
+.hero-img {
+    width: 248px;
+    height: 248px;
+    margin: 25px 0;
+}
+
+.inline-text {
+    cursor: pointer;
+    font-size: 16pt;
+    margin: 5px 0;
+}
+
+.first {
+    animation: green-blurry ease-in infinite 3s;
+    animation-delay: 1.1s;
+}
+
+.second {
+    animation: yellow-blurry ease-in infinite 3s;
+    animation-delay: 1.5s;
+}
+
+.third {
+    animation: red-blurry ease-in infinite 3s;
+    animation-delay: 1.9s;
+}
+
+.img-fluid {
+    height: 60px;
+    width: 60px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.3, 1.3);
+}
+/* Cuerpo de la pagina (Hero) */
+
+/* Seccion "Sobre mi" */
+.about-me, .proyecto {
+    height: 600px;
+    color: white;
+    background-color: var(--bg-color);
+}
+
+.about-me .container {
+    max-width: 650px;
+    text-align: center;
+}
+
+.about-me-title, .proyecto-title, .exp-title {
+    font-size: 2.5rem;
+    padding: 100px 0 20px 0;
+    font-weight: bold;
+}
+/* Seccion "Sobre mi" */
+
+/* Seccion "Experiencia" */
+.experiencia {
+    min-height: 800px;
+}
+
+.icon {
+    font-size: 28pt;
+    background-color: var(--primary-color);
+    padding: 12px;
+    border-radius: 50%;
+    color: white;
+}
+
+.bi-rocket-takeoff {
+    background-color: var(--personal-yellow);
+}
+
+.bi-backpack2 {
+    background-color: var(--personal-red);
+}
+/* Seccion "Experiencia" */
+
+/* Tarjetas general */
+.card {
+    margin-top: 20px;
+    transition: background-color ease 0.25s,
+                color ease 0.25s;
+}
+
+.card:hover {
+    background-color: var(--bg-color);
+    color: white;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    padding: 20px 5px 10px 5px;
+    text-align: justify;
+}
+/* Tarjetas general */
+
+/* Seccion "Proyectos" */
+.card-project:hover {
+    background-color: white;
+    color: var(--bg-color);
+}
+
+.proyecto {
+    height: 1100px;
+}
+
+.proyecto-descript {
+    font-size: 1.3rem;
+}
+
+.card-img-top {
+    transition: all 0.2s ease;
+}
+
+.card-project:hover img {
+    opacity: 0.2;
+}
+
+.card-project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .proyecto-iconos {
+    display: flex;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    text-align: center;
+}
+
+.overlay i {
+    color: var(--bg-color);
+    font-size: 50px;
+    margin: 10px;
+}
+
+.overlay i:hover {
+    color: var(--primary-color);
+}
+/* Seccion "Proyectos" */
+
+
+/* Keyframes */
+@keyframes green-blurry {
+    0%, 100% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 15px var(--primary-color),
+                 0 0 5px var(--primary-color),
+                 0 0 5px var(--primary-color);
+    }
+}
+@keyframes yellow-blurry {
+    0%, 100% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 15px var(--personal-yellow),
+                 0 0 5px var(--personal-yellow),
+                 0 0 5px var(--personal-yellow);
+    }
+}
+@keyframes red-blurry {
+    0%, 100% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 15px var(--personal-red),
+                 0 0 5px var(--personal-red),
+                 0 0 5px var(--personal-red);
+    }
+}
+/* Keyframes */
+
+
+/* Diseño Responsivo */
+/* Monitor lenovo */
+@media screen and (width <= 1600px) {
+    .hero-principal-monitor {
+        height: 700px;
+    }
+    .img-fluid-monitor {
+        margin: 0 20px;
+        width: 90px;
+        height: 90px;
+    }
+    .about-me-monitor {
+        height: 850px;
+    }
+    .about-me-title-monitor {
+        margin: 50px 0 0 0;
+    }
+    .about-me-title-monitor,
+    .exp-title-monitor,
+    .proyecto-title-monitor {
+        font-size: 36px;
+    }
+    .about-me-p-monitor,
+    .card-text-monitor {
+        font-size: 15px;
+    }
+    .experiencia-monitor {
+        height: 900px;
+    }
+    .card-title-monitor {
+        font-size: 20px;
+    }
+    .proyecto-monitor {
+        height: 700px;
+    }
+    .overlay-monitor {
+        top: 20%;
+        left: 29%;
+    }
+    .overlay-monitor i {
+        font-size: 60px;
+        margin: 0 15px;
+    }
+}
+/* Monitor lenovo */
+
+/* Portatil xl */
+@media screen and (width <= 1440px) {
+    .item-xl{
+        font-size: 22px;
+    }
+    .hero-principal-xl {
+        height: 850px;
+    }
+    .hero-principal-xl h1 {
+        font-size: 42px;
+    }
+    .inline-text-xl {
+        font-size: 28px;
+    }
+    .img-fluid-xl {
+        width: 100px;
+        height: 100px;
+    }
+    .about-me-xl {
+        height: 1000px;
+    }
+    .about-me-title-xl, 
+    .exp-title-xl {
+        margin: 50px 0 0 0;
+    }
+    .about-me-title-xl, 
+    .exp-title-xl,
+    .proyecto-xl .proyecto-title {
+        font-size: 42px;
+    }
+    .about-me-p-xl, .card-text-xl {
+        font-size: 20px;
+    }
+    .experiencia-xl {
+        height: 1180px;
+    }
+    .card-title-xl {
+        font-size: 24px;
+    }
+    .badge-xl {
+        font-size: 14px;
+    }
+    .proyecto-xl {
+        height: 850px;
+    }
+    .proyecto-xl .proyecto-title {
+        margin: 50px 0 20px 0;
+    }
+    .overlay-xl {
+        top: 20%;
+        left: 30%;
+    }
+    .overlay-xl i {
+        font-size: 70px;
+    } 
+}
+/* Portatil xl */
+
+/* Mi resolucion */
+@media screen and (width <= 1366px) {
+    .item-my-res {
+        font-size: 20px;
+    }
+    .hero-principal-my-res {
+        height: 700px;
+    }
+    .hero-principal-my-res .hero-img {
+        margin: -80px 0 10px 0;
+    }
+    .hero-principal-my-res h1 {
+        font-size: 32px;
+    }
+    .inline-text-my-res {
+        font-size: 24px;
+    }
+    .img-fluid-my-res {
+        margin: -10px 0 0 0;
+        width: 80px;
+        height: 80px;
+    }
+    .about-me-my-res {
+        height: 800px;
+    }
+    .about-me-title-my-res {
+        margin: 50px 0 0 0;
+    } 
+    .about-me-title-my-res, 
+    .exp-title-my-res, 
+    .proyecto-title-my-res {
+        font-size: 36px;
+    }
+    .about-me-p-xs, 
+    .card-text-my-res {
+        font-size: 16px;
+    }
+    .exp-title-my-res {
+        margin: 10px 0;
+    }
+    .overlay-my-res {
+        top: 15%;
+        left: 27%;
+    }
+}
+/* Mi resolucion */
+
+/* Portatil lg */
+@media screen and (width <= 1024px) {
+    .hero-principal-lg .hero-img {
+        margin: -150px 0 50px 0;
+    }
+    .hero-principal-lg {
+        height: 850px;
+    }
+    .random-img-lg {
+        margin: 40px 0 0 0;
+    }
+    .img-fluid-lg {
+        width: 75px;
+        height: 75px;
+    }
+    .about-me-lg {
+        height: 920px;
+    }
+    .about-me-title-lg {
+        margin: 80px 0 0 0;
+        font-size: 40px;
+    }
+    .about-me-p-lg, .card-text-lg {
+        font-size: 18px;
+    }
+    .experiencia-lg {
+        height: 1450px;
+    }
+    .card-title-lg {
+        font-size: 25px;
+    }
+    .badge-lg {
+        font-size: 14px;
+        margin: 1px 1px;
+    }
+    .proyecto-lg {
+        height: 900px;
+    }
+    .proyecto-lg .proyecto-title {
+        margin: 50px 0 20px 0;
+    }
+    .overlay-lg {
+        top: 15%;
+        left: 24%;
+    }
+    .overlay-lg i {
+        font-size: 50px;
+    }
+}
+
+/* Tablet md */
+@media screen and (width <= 768px) {
+    .hero-principal-md {
+        height: 850px;
+    }
+    .conocimientos-md {
+        margin: 10px 20px;
+    }
+    .inline-text-md {
+        font-size: 20px;
+    }
+    .random-img-md {
+        margin: 20px 0 0 0;
+    }
+    .img-fluid-md {
+        width: 80px;
+        height: 80px;
+    }
+    .about-me-md {
+        height: 1100px;
+    }
+    .about-me-title-md {
+        font-size: 38px;
+    }
+    .about-me-p-md, .card-text-md {
+        font-size: 18px;
+    }
+    .card-title-md {
+        font-size: 24px;
+    }
+    .experiencia-md {
+        height: 1650px;
+    }
+    .badge-md {
+        font-size: 14px;
+        margin: 2px 1px;
+    }
+    .proyecto-md {
+        height: 1200px;
+    }
+    .overlay-md {
+        top: 16%;
+        left: 22%;
+    }
+    .overlay-md i {
+        font-size: 65px;
+    }
+    .extra {
+        top: 25%;
+        left: 33%;
+    }
+    .extra i {
+        font-size: 80px;
+    }
+}
+
+/* Celular xs */
+@media screen and (width <= 425px) {
+    .hero-principal-xs {
+        height: 900px;
+    }
+    .conocimientos-xs {
+        margin: 30px 0 0 0;
+    }
+    .random-img-xs {
+        margin: 15px 0 0 0;
+    }
+    .img-fluid-xs {
+        width: 70px;
+        height: 70px;
+    }
+    .about-me-xs {
+        height: 1200px;
+    }
+    .about-me-title-xs {
+        font-size: 34px;
+    }
+    .about-me-p-xs, .card-text-xs {
+        font-size: 17px;
+    }
+    .card-title-xs {
+        font-size: 22px;
+    }
+    .experiencia-xs {
+        height: 2400px;
+    }
+    .badge-xs {
+        font-size: 14px;
+        margin: 3px 2px 0 2px;
+    }
+    .proyecto-xs {
+        height: 1500px;
+    }
+    .overlay-xs {
+        top: 15%;
+        left: 25%;
+    }
+    .overlay-xs i {
+        font-size: 75px;
+    }
+}
+/* Diseño Responsivo */
